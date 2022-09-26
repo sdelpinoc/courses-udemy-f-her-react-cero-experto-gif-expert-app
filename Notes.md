@@ -32,5 +32,13 @@ And call the component with:
 - `yarn dev`
 
 ## Create production build
-- `yarn build`
-- Use http-server package (already installed globally)
+- Netyfly
+    - `yarn build`
+    - Use http-server package (already installed globally)
+
+    - Upload the dist directory to build in netifly.com
+
+- Github pages
+    - git init
+    - git add .
+    - git commit -m "Initial commit"
