@@ -40,5 +40,8 @@ And call the component with:
 
 - Github pages
     - git init
+    - git checkout -b main
     - git add .
     - git commit -m "Initial commit"
+    - git remote add origin [github_url]
+    - git push -u origin main
