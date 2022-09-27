@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PropTypes } from 'prop-types';
 
 export const AddCategory = ({ onNewCategory }) => {
     // console.log(setCategories);
@@ -6,6 +7,7 @@ export const AddCategory = ({ onNewCategory }) => {
 
     const [inputValue, setinputValue] = useState('');
 
+    // we receive an event which we destruct in '{ target }'
     const onInputChange = ({ target }) => {
         // console.log(target.value);
         setinputValue(target.value);
@@ -16,7 +18,7 @@ export const AddCategory = ({ onNewCategory }) => {
         event.preventDefault();
 
         const newInputValue = inputValue.trim();
-        console.log(newInputValue);
+        // console.log(newInputValue);
 
         if (newInputValue.length <= 1) return;
 
@@ -27,7 +29,7 @@ export const AddCategory = ({ onNewCategory }) => {
     };
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} aria-label="form">
             <input
                 type="text"
                 value={inputValue}
@@ -38,3 +40,7 @@ export const AddCategory = ({ onNewCategory }) => {
         </form>
     )
 }
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired
+};
