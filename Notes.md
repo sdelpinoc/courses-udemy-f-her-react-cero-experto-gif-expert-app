@@ -92,8 +92,19 @@ And call the component with:
 import 'whatwg-fetch';
 ~~~
 
+- To have the autocomplete of the jest module, add de jsconfig.json file in test directory:
+~~~
+{
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
+~~~
+
 ## Tips:
-- Trace the critical trace(the main function of the application)
+- Trace the critical flow(the main function of the application)
 - Start with the components with less dependency
 
 - pro-types
@@ -105,4 +116,4 @@ import 'whatwg-fetch';
     ~~~
     import fetch from 'cross-fetch';
     ~~~
-    - In the file witch the fetch call
+    - In the file with the fetch call
